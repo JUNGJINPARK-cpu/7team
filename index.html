@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Missile Dodge - 미사일 피하기</title>
+  <!-- p5.js: Processing을 자바스크립트로 옮긴 라이브러리 -->
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.9.4/lib/p5.min.js"></script>
+  <style>
+    html, body {
+      margin: 0;
+      height: 100%;
+      background: #0b0c16;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-family: "Pretendard", "Malgun Gothic", sans-serif;
+      color: #ccc;
+    }
+    main canvas {
+      border-radius: 10px;
+      box-shadow: 0 0 30px rgba(80, 200, 255, 0.25);
+    }
+    .help {
+      margin-top: 12px;
+      font-size: 14px;
+      opacity: 0.7;
+    }
+    /* 모바일용 터치 버튼 */
+    .touch {
+      display: none;
+      gap: 20px;
+      margin-top: 12px;
+    }
+    .touch button {
+      width: 90px;
+      height: 60px;
+      font-size: 26px;
+      border: none;
+      border-radius: 12px;
+      background: #1e2340;
+      color: #fff;
+      touch-action: none;
+    }
+    @media (pointer: coarse) {
+      .touch { display: flex; }
+    }
+  </style>
+</head>
+<body>
+  <main></main>
+  <div class="help">← → 또는 A / D 이동 · 스페이스 시작 · R 재시작</div>
+  <div class="touch">
+    <button id="btnLeft">◀</button>
+    <button id="btnStart">●</button>
+    <button id="btnRight">▶</button>
+  </div>
+
+  <script src="sketch.js"></script>
+</body>
+</html>
